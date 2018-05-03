@@ -8,7 +8,4 @@ public class ADC extends Champion{
         name = Name;
         growthRate = Rate;
     }
-
-    
-
 }
