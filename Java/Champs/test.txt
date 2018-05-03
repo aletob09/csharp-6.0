@@ -1,0 +1,1 @@
+role=ADC; name=Jhin; rate=80; damage=40; speed=20; crit=50; 
