@@ -1,6 +1,6 @@
 public class Tank extends Champion{
-    public int armor;
-    public int resistance;    
+    public double armor;
+    public double resistance;    
 
     public Tank(String Name, int Rate, int Armor, int Res){
         armor = Armor;
@@ -9,12 +9,16 @@ public class Tank extends Champion{
         growthRate = Rate;
     }
 
-    public int[] calcGrowth(){
-        int[] stats = new int[2];
-        stats[0] = armor + (armor / (100 / growthRate));
-        stats[1] = resistance + (resistance / (100 / resistance));;
+    public double calcArmorGrowth(){
+        double tmp = armor + ((double)armor / (100 / growthRate));
         
-        return stats;
+        return tmp;
+    }
+
+    public double calcRESGrowth(){
+        double tmp = resistance + (resistance / ((double)100 / growthRate));
+
+        return tmp;
     }
 
 }
