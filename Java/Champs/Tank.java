@@ -1,6 +1,6 @@
 public class Tank extends Champion{
-    int armor;
-    int resistance;    
+    public int armor;
+    public int resistance;    
 
     public Tank(String Name, int Rate, int Armor, int Res){
         armor = Armor;
