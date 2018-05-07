@@ -9,15 +9,29 @@ public class ADC extends Champion{
         speed = SPD;
     }
 
-    public double calcDMGGrowth(){
+    private double calcDMGGrowth(){
         double tmp = damage + ((double)damage / (100 / growthRate));
         
         return tmp;
     }
 
-    public double calcSPDGrowth(){
+    private double calcSPDGrowth(){
         double tmp = speed + (speed / ((double)100 / growthRate));
 
         return tmp;
+    }
+
+    public void levelUp(int addLVL){
+        if((addLVL + Level)> 18)
+        {
+            return;
+        }
+        else{
+            Level += addLVL;
+            for(int i = 0; i < addLVL ; i++){
+                damage = calcDMGGrowth();
+                speed = calcSPDGrowth();
+            }
+        }
     }
 }

@@ -9,16 +9,30 @@ public class Tank extends Champion{
         growthRate = Rate;
     }
 
-    public double calcArmorGrowth(){
+    private double calcArmorGrowth(){
         double tmp = armor + ((double)armor / (100 / growthRate));
         
         return tmp;
     }
 
-    public double calcRESGrowth(){
+    private double calcRESGrowth(){
         double tmp = resistance + (resistance / ((double)100 / growthRate));
 
         return tmp;
+    }
+
+    public void levelUp(int addLVL){
+        if((addLVL + Level)> 18)
+        {
+            return;
+        }
+        else{
+            Level += addLVL;
+            for(int i = 0; i < addLVL ; i++){
+                armor = calcArmorGrowth();
+                resistance = calcRESGrowth();
+            }
+        }
     }
 
 }

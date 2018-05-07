@@ -14,8 +14,14 @@ public class Main {
         System.out.print((champs.get(1)).name);
         */
 
+        
         ADC Jhin = new ADC("Jhin", 80, 40, 20);
-        System.out.print(Jhin.calcSPDGrowth());
+        Jhin.levelUp(3);
+        System.out.println(Jhin.speed);
+        
 
+        Tank Nasus = new Tank("Nasus", 50, 50, 20);
+        Nasus.levelUp(2);
+        System.out.println(Nasus.armor);
     }
 }
