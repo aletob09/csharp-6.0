@@ -2,11 +2,12 @@ public class Tank extends Champion{
     public double armor;
     public double resistance;    
 
-    public Tank(String Name, int Rate, int Armor, int Res){
+    public Tank(String Name, int HP, int Rate, int Armor, int Res){
         armor = Armor;
         resistance = Res;
         name = Name;
         growthRate = Rate;
+        health = HP;
     }
 
     private double calcArmorGrowth(){
@@ -31,8 +32,8 @@ public class Tank extends Champion{
             for(int i = 0; i < addLVL ; i++){
                 armor = calcArmorGrowth();
                 resistance = calcRESGrowth();
+                health = calcHPGrowth();
             }
         }
     }
-
 }
