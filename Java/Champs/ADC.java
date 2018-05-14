@@ -2,7 +2,7 @@ public class ADC extends Champion{
     double damage;
     double speed;
 
-    public ADC(String Name, int Rate, int DMG, int SPD){
+    public ADC(String Name, int HP, int Rate, int DMG, double SPD){
         name = Name;
         growthRate = Rate;
         damage = DMG;
@@ -31,7 +31,14 @@ public class ADC extends Champion{
             for(int i = 0; i < addLVL ; i++){
                 damage = calcDMGGrowth();
                 speed = calcSPDGrowth();
+                health = calcHPGrowth();
             }
         }
+    }
+
+    public double calcDPS(){
+        double DPS = damage * speed;
+
+        return DPS;
     }
 }
