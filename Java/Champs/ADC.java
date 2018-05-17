@@ -42,3 +42,16 @@ public class ADC extends Champion{
         return DPS;
     }
 }
+
+
+
+
+if (isInteger(parts[i])){
+    if (num1 == 0){
+        num1 = Integer.parseInt(parts[i]);
+    }
+    else{
+        num2 = Integer.parseInt(parts[i]);
+        num1 = num1 + num2;
+    }
+}

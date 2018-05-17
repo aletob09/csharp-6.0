@@ -22,13 +22,13 @@ public class Main{
 
         switch(operation) {
             case "+": System.out.print(num1 + num2);
-                    break;
+                break;
             case "-": System.out.print(num1 - num2);
-                    break;
+                break;
             case "*": System.out.print(num1 * num2);
-                    break;
+                break;
             case "/": System.out.print(num1 / num2);
-                    break;
+                break;
             default: System.out.print("error");
         }
     }
