@@ -63,6 +63,8 @@ public class Main{
         }
         System.out.print(" for " + equal + "%.");
 
+
+
     }
 }
 
